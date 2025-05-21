@@ -1,0 +1,188 @@
+/* Modern color palette */
+:root {
+  --primary-color: #4a90e2;
+  --primary-hover: #357ABD;
+  --background-color: #f4f7f9;
+  --text-color: #333;
+  --error-color: #e74c3c;
+  --input-bg: white;
+  --border-color: #ccc;
+  --focus-border-color: var(--primary-color);
+  --button-bg: var(--primary-color);
+  --button-hover-bg: var(--primary-hover);
+  --button-disabled-bg: #a3c1f7;
+  --required-color: #e74c3c;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+.register-form-container,
+.success-container {
+  max-width: 480px;
+  margin: 3rem auto;
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(74, 144, 226, 0.15);
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 700;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1.1rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-top: 0.4rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--input-bg);
+  transition: border-color 0.3s;
+  outline-offset: 2px;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--focus-border-color);
+  outline: none;
+  box-shadow: 0 0 6px var(--focus-border-color);
+}
+
+.error-input {
+  border-color: var(--error-color);
+  background: #fdecea;
+}
+
+.error-msg {
+  color: var(--error-color);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.required {
+  color: var(--required-color);
+  margin-left: 2px;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row label {
+  flex: 1;
+  min-width: 150px;
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.password-wrapper input {
+  flex-grow: 1;
+  margin: 0;
+}
+
+.show-hide-btn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.show-hide-btn:hover {
+  background: var(--primary-hover);
+}
+
+.phone-inputs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.phone-code {
+  width: 25%;
+  padding-left: 0.5rem;
+}
+
+.phone-inputs input {
+  width: 75%;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  background: var(--button-bg);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1.6rem;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:disabled {
+  background: var(--button-disabled-bg);
+  cursor: not-allowed;
+}
+
+.submit-btn:not(:disabled):hover {
+  background: var(--button-hover-bg);
+}
+
+.details p {
+  background: #f0f7ff;
+  border-left: 6px solid var(--primary-color);
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.success-container button {
+  margin-top: 1rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.success-container button:hover {
+  background: var(--primary-hover);
+}
